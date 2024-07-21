@@ -1,11 +1,15 @@
 import 'dotenv/config'
 
-import { Client } from 'discord.js'
+import { Client, Collection } from 'discord.js'
+import { GlobCLient } from './types'
+import { handleEvents } from './handlers/events'
 
 const client = new Client({
   intents: ['Guilds', 'GuildMembers', 'GuildMessages', 'MessageContent'],
-})
+}) as GlobCLient
 
-client.on('ready', c => console.log(`${c.user.username} está online!`))
+client.events = new Collection()
+
+handleEvents(client)
 
 client.login(process.env.DISCORD_TOKEN)
