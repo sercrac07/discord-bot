@@ -5,3 +5,4 @@ Este es el repositorio oficial sobre el tutorial de youtube de [Sercrac07](https
 ## Vídeos
 
 - 01 - [Iniciando el bot.](https://youtu.be/SyFR6FEL01A)
+- 02 - [Event Handler.](https://youtu.be/V_6e2tBNsWw)
