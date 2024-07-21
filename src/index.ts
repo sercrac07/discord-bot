@@ -1,12 +1,12 @@
 import 'dotenv/config'
 
 import { Client, Collection } from 'discord.js'
-import { GlobCLient } from './types'
+import { GlobClient } from './types'
 import { handleEvents } from './handlers/events'
 
 const client = new Client({
   intents: ['Guilds', 'GuildMembers', 'GuildMessages', 'MessageContent'],
-}) as GlobCLient
+}) as GlobClient
 
 client.events = new Collection()
 

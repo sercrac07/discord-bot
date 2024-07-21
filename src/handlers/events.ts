@@ -1,9 +1,9 @@
 import { Table } from 'tablifier'
 
-import type { Event, GlobCLient } from '../types'
+import type { Event, GlobClient } from '../types'
 import { loadFiles } from '../lib/files'
 
-export async function handleEvents(client: GlobCLient): Promise<void> {
+export async function handleEvents(client: GlobClient): Promise<void> {
   const table = new Table('Nombre del evento', 'Estado')
 
   client.events.clear()
@@ -17,7 +17,7 @@ export async function handleEvents(client: GlobCLient): Promise<void> {
       client.events.set(event.name, execute)
       if (event.rest) {
         if (event.once) client.rest.once(event.name, execute)
-        else client.rest.once(event.name, execute)
+        else client.rest.on(event.name, execute)
       } else {
         if (event.once) client.once(event.name, execute)
         else client.on(event.name, execute)
