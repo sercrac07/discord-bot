@@ -1,7 +1,7 @@
 import 'dotenv/config'
-
 import { Client, Collection } from 'discord.js'
-import { GlobClient } from './types'
+
+import type { GlobClient } from './types'
 import { handleEvents } from './handlers/events'
 
 const client = new Client({
