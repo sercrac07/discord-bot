@@ -1,4 +1,5 @@
-import { Event } from '../../types'
+import type { Event } from '../../types'
+import { handleCommands } from '../../handlers/commands'
 
 export const event: Event<'ready'> = {
   name: 'ready',
@@ -6,5 +7,7 @@ export const event: Event<'ready'> = {
 
   execute(client) {
     console.log(`[CLIENT] ${client.user.username} está online!`)
+
+    handleCommands(client)
   },
 }
