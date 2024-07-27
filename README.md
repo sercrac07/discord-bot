@@ -8,3 +8,4 @@ Este es el repositorio oficial sobre el tutorial de youtube de [Sercrac07](https
 - 02 - [Event Handler.](https://youtu.be/V_6e2tBNsWw)
 - 03 - [Command Handler y /ping](https://youtu.be/QMcWjtUdZ4E)
 - 04 - [Comando /say](https://youtu.be/2hzMtQ7VxHU)
+- 05 - [Manejo de permisos y comando /añadir-rol](https://youtu.be/6UXaJcR3VtY)
