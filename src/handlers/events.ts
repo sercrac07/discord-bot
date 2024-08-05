@@ -1,14 +1,14 @@
-import { Table } from 'tablifier'
+import { Table } from "tablifier"
 
-import type { Event, GlobClient } from '../types'
-import { loadFiles } from '../lib/files'
+import type { Event, GlobClient } from "../types"
+import { loadFiles } from "../lib/files"
 
 export async function handleEvents(client: GlobClient): Promise<void> {
-  const table = new Table('Nombre del evento', 'Estado')
+  const table = new Table("Nombre del evento", "Estado")
 
   client.events.clear()
 
-  const files = await loadFiles('events')
+  const files = await loadFiles("events")
   files.forEach(file => {
     const { event } = require(file) as { event: Event<any> }
 
@@ -23,9 +23,9 @@ export async function handleEvents(client: GlobClient): Promise<void> {
         else client.on(event.name, execute)
       }
 
-      table.addRow(event.name, 'Cargado')
+      table.addRow(event.name, "Cargado")
     } catch (error) {
-      table.addRow(event.name, 'Error')
+      table.addRow(event.name, "Error")
     }
   })
 
