@@ -11,3 +11,4 @@ Este es el repositorio oficial sobre el tutorial de youtube de [Sercrac07](https
 - 05 - [Manejo de permisos y comando /añadir-rol](https://youtu.be/6UXaJcR3VtY)
 - 06 - [Fetching de datos con la API de pokeapi.co y dog.ceo](https://youtu.be/pLCh4BRUeHQ)
 - 07 - [Envío y ejecución de componentes](https://youtu.be/WPlj7YG_gZ8)
+- 08 - [Conexión a la base de datos](https://youtu.be/vLG1qZLiQO0)
